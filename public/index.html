@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMyTable | Michael - (English)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-red">book</span>my<span class="brand-red">table</span>
+        </div>
+        <div class="search-panel">
+          <div class="search-input">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/></svg>
+            <input type="text" placeholder="Search Restaurants" />
+          </div>
+          <button class="search-button">Search</button>
+        </div>
+        <div class="top-actions">
+          <button class="location">Bengaluru <span>▾</span></button>
+          <button class="sign-in">Sign in</button>
+          <button class="menu-toggle" aria-label="Menu">☰</button>
+        </div>
+      </header>
+
+      <div class="app-layout">
+        <nav class="main-nav side-nav">
+          <a href="index.html" class="nav-special active">Live Availability</a>
+          <a href="restaurants.html">All Restaurants</a>
+        </nav>
+
+        <main class="page-content">
+
+        <section class="filter-row">
+          <button class="filter-button active">Empty Seats</button>
+          <button class="filter-button">Areas</button>
+          <button class="filter-button">Ratings</button>
+          <button class="filter-button">Cuisines</button>
+          <button class="filter-button">Vegetarian</button>
+          <button class="filter-button">Sort By</button>
+          <button class="search-icon">🔍</button>
+        </section>
+
+        <section class="availability-summary">
+          <div class="availability-card">
+            <div class="availability-label">Restaurants with seats available right now</div>
+            <div class="availability-value">24</div>
+            <div class="availability-detail">Showing live availability for Bengaluru restaurants</div>
+          </div>
+        </section>
+
+        <section class="restaurant-list">
+          <article class="restaurant-card">
+            <div class="restaurant-card-header">
+              <div class="restaurant-logo logo-fine">SKY</div>
+              <div>
+                <div class="restaurant-name">Sky Garden Bistro</div>
+                <div class="restaurant-meta">Terrace dining · Koramangala</div>
+              </div>
+            </div>
+            <div class="restaurant-info">
+              <span>⭐ 4.9</span>
+              <span>Area: Koramangala</span>
+              <span>Seats: 12</span>
+              <span>Floors: 2</span>
+            </div>
+            <div class="showtimes">
+              <a class="time-pill highlight" href="booking.html?restaurant=Sky%20Garden%20Bistro&maxSeats=12">12 seats available</a>
+              <a class="time-pill book-link" href="booking.html?restaurant=Sky%20Garden%20Bistro&maxSeats=12">Book now</a>
+            </div>
+          </article>
+
+          <article class="restaurant-card">
+            <div class="restaurant-card-header">
+              <div class="restaurant-logo logo-indian">FIG</div>
+              <div>
+                <div class="restaurant-name">Fig & Vine</div>
+                <div class="restaurant-meta">Italian · Jayanagar</div>
+              </div>
+            </div>
+            <div class="restaurant-info">
+              <span>⭐ 4.7</span>
+              <span>Area: Jayanagar</span>
+              <span>Seats: 18</span>
+              <span>Floors: 3</span>
+            </div>
+            <div class="showtimes">
+              <a class="time-pill highlight" href="booking.html?restaurant=Fig%20%26%20Vine&maxSeats=18">18 seats available</a>
+              <a class="time-pill book-link" href="booking.html?restaurant=Fig%20%26%20Vine&maxSeats=18">Book now</a>
+            </div>
+          </article>
+
+          <article class="restaurant-card">
+            <div class="restaurant-card-header">
+              <div class="restaurant-logo logo-cafe">OM</div>
+              <div>
+                <div class="restaurant-name">Ombre House</div>
+                <div class="restaurant-meta">Casual dining · Indiranagar</div>
+              </div>
+            </div>
+            <div class="restaurant-info">
+              <span>⭐ 4.8</span>
+              <span>Area: Indiranagar</span>
+              <span>Seats: 10</span>
+              <span>Floors: 1</span>
+            </div>
+            <div class="showtimes">
+              <a class="time-pill highlight" href="booking.html?restaurant=Ombre%20House&maxSeats=10">10 seats available</a>
+              <a class="time-pill book-link" href="booking.html?restaurant=Ombre%20House&maxSeats=10">Book now</a>
+            </div>
+          </article>
+
+          <article class="restaurant-card">
+            <div class="restaurant-card-header">
+              <div class="restaurant-logo logo-rooftop">BR</div>
+              <div>
+                <div class="restaurant-name">Breezy Raj</div>
+                <div class="restaurant-meta">Family seating · MG Road</div>
+              </div>
+            </div>
+            <div class="restaurant-info">
+              <span>⭐ 4.6</span>
+              <span>Area: MG Road</span>
+              <span>Seats: 14</span>
+              <span>Floors: 2</span>
+            </div>
+            <div class="showtimes">
+              <a class="time-pill highlight" href="booking.html?restaurant=Breezy%20Raj&maxSeats=14">14 seats available</a>
+              <a class="time-pill book-link" href="booking.html?restaurant=Breezy%20Raj&maxSeats=14">Book now</a>
+            </div>
+          </article>
+        </section>
+        </main>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMyTable | All Restaurants</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-red">book</span>my<span class="brand-red">table</span>
+        </div>
+        <div class="search-panel">
+          <div class="search-input">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/></svg>
+            <input type="text" placeholder="Search Restaurants" />
+          </div>
+          <button class="search-button">Search</button>
+        </div>
+        <div class="top-actions">
+          <button class="location">Bengaluru <span>▾</span></button>
+          <button class="sign-in">Sign in</button>
+          <button class="menu-toggle" aria-label="Menu">☰</button>
+        </div>
+      </header>
+
+      <div class="app-layout">
+        <nav class="main-nav side-nav">
+          <a href="index.html">Live Availability</a>
+          <a href="restaurants.html" class="nav-special active">All Restaurants</a>
+        </nav>
+
+        <main class="page-content restaurant-page">
+        <section class="page-header">
+          <div>
+            <h1>Restaurants by availability</h1>
+            <p>Browse menus, cuisine types, Google ratings, area, seats available, and floor details.</p>
+          </div>
+          <div class="summary-pill">24 restaurants available now</div>
+        </section>
+
+        <section class="restaurant-filters">
+          <button class="filter-button active">All</button>
+          <button class="filter-button">Fine Dining</button>
+          <button class="filter-button">Indian</button>
+          <button class="filter-button">Cafe</button>
+          <button class="filter-button">Rooftop</button>
+          <button class="filter-button">Family</button>
+        </section>
+
+        <section class="restaurant-list">
+          <div class="restaurant-group">
+            <div class="group-title">Fine Dining</div>
+            <div class="group-grid">
+            <article class="restaurant-card">
+              <div class="restaurant-card-header">
+                <div class="restaurant-logo logo-fine">FD</div>
+                <div>
+                  <div class="restaurant-name">Azure Table</div>
+                  <div class="restaurant-meta">Continental · Koramangala</div>
+                </div>
+              </div>
+              <div class="restaurant-info">
+                <span>⭐ 4.9</span>
+                <span>Seats: 18</span>
+                <span>Floors: 2</span>
+              </div>
+              <button class="toggle-details">View floor availability</button>
+              <div class="restaurant-details hidden">
+                <div class="floor-list">
+                  <div class="floor-item">
+                    <span>Floor 1</span>
+                    <span>10 seats available</span>
+                    <button class="book-floor">Book floor 1</button>
+                  </div>
+                  <div class="floor-item">
+                    <span>Floor 2</span>
+                    <span>8 seats available</span>
+                    <button class="book-floor">Book floor 2</button>
+                  </div>
+                </div>
+                <button class="book-button">Book a table</button>
+              </div>
+            </article>
+
+            <article class="restaurant-card">
+              <div class="restaurant-card-header">
+                <div class="restaurant-logo logo-indian">IN</div>
+                <div>
+                  <div class="restaurant-name">Masala Hearth</div>
+                  <div class="restaurant-meta">North Indian · Jayanagar</div>
+                </div>
+              </div>
+              <div class="restaurant-info">
+                <span>⭐ 4.7</span>
+                <span>Seats: 22</span>
+                <span>Floors: 3</span>
+              </div>
+              <button class="toggle-details">View floor availability</button>
+              <div class="restaurant-details hidden">
+                <div class="floor-list">
+                  <div class="floor-item">
+                    <span>Ground floor</span>
+                    <span>12 seats available</span>
+                    <button class="book-floor">Book ground</button>
+                  </div>
+                  <div class="floor-item">
+                    <span>First floor</span>
+                    <span>6 seats available</span>
+                    <button class="book-floor">Book first</button>
+                  </div>
+                  <div class="floor-item">
+                    <span>Rooftop</span>
+                    <span>4 seats available</span>
+                    <button class="book-floor">Book rooftop</button>
+                  </div>
+                </div>
+                <button class="book-button">Book a table</button>
+              </div>
+            </article>
+            <article class="restaurant-card">
+              <div class="restaurant-card-header">
+                <div class="restaurant-logo logo-indian">IN</div>
+                <div>
+                  <div class="restaurant-name">Masala Hearth</div>
+                  <div class="restaurant-meta">North Indian · Jayanagar</div>
+                </div>
+              </div>
+              <div class="restaurant-info">
+                <span>⭐ 4.7</span>
+                <span>Seats: 22</span>
+                <span>Floors: 3</span>
+              </div>
+              <button class="toggle-details">View floor availability</button>
+              <div class="restaurant-details hidden">
+                <div class="floor-list">
+                  <div class="floor-item">
+                    <span>Ground floor</span>
+                    <span>12 seats available</span>
+                    <button class="book-floor">Book ground</button>
+                  </div>
+                  <div class="floor-item">
+                    <span>First floor</span>
+                    <span>6 seats available</span>
+                    <button class="book-floor">Book first</button>
+                  </div>
+                  <div class="floor-item">
+                    <span>Rooftop</span>
+                    <span>4 seats available</span>
+                    <button class="book-floor">Book rooftop</button>
+                  </div>
+                </div>
+                <button class="book-button">Book a table</button>
+              </div>
+            </article>
+          </div>
+          </div>
+
+          <div class="restaurant-group">
+            <div class="group-title">Cafe & Casual</div>
+            <div class="group-grid">
+            <article class="restaurant-card">
+              <div class="restaurant-card-header">
+                <div class="restaurant-logo logo-cafe">CA</div>
+                <div>
+                  <div class="restaurant-name">Bean & Brew</div>
+                  <div class="restaurant-meta">Cafe · Indiranagar</div>
+                </div>
+              </div>
+              <div class="restaurant-info">
+                <span>⭐ 4.6</span>
+                <span>Seats: 14</span>
+                <span>Floors: 1</span>
+              </div>
+              <button class="toggle-details">View floor availability</button>
+              <div class="restaurant-details hidden">
+                <div class="floor-list">
+                  <div class="floor-item">
+                    <span>Main floor</span>
+                    <span>14 seats available</span>
+                    <button class="book-floor">Book main</button>
+                  </div>
+                </div>
+                <button class="book-button">Book a table</button>
+              </div>
+            </article>
+
+            <article class="restaurant-card">
+              <div class="restaurant-card-header">
+                <div class="restaurant-logo logo-rooftop">RT</div>
+                <div>
+                  <div class="restaurant-name">Rooftop Rhythm</div>
+                  <div class="restaurant-meta">Rooftop Lounge · MG Road</div>
+                </div>
+              </div>
+              <div class="restaurant-info">
+                <span>⭐ 4.8</span>
+                <span>Seats: 9</span>
+                <span>Floors: 2</span>
+              </div>
+              <button class="toggle-details">View floor availability</button>
+              <div class="restaurant-details hidden">
+                <div class="floor-list">
+                  <div class="floor-item">
+                    <span>Lower deck</span>
+                    <span>5 seats available</span>
+                    <button class="book-floor">Book lower</button>
+                  </div>
+                  <div class="floor-item">
+                    <span>Upper deck</span>
+                    <span>4 seats available</span>
+                    <button class="book-floor">Book upper</button>
+                  </div>
+                </div>
+                <button class="book-button">Book a table</button>
+              </div>
+            </article>
+            <article class="restaurant-card">
+              <div class="restaurant-card-header">
+                <div class="restaurant-logo logo-indian">IN</div>
+                <div>
+                  <div class="restaurant-name">Masala Hearth</div>
+                  <div class="restaurant-meta">North Indian · Jayanagar</div>
+                </div>
+              </div>
+              <div class="restaurant-info">
+                <span>⭐ 4.7</span>
+                <span>Seats: 22</span>
+                <span>Floors: 3</span>
+              </div>
+              <button class="toggle-details">View floor availability</button>
+              <div class="restaurant-details hidden">
+                <div class="floor-list">
+                  <div class="floor-item">
+                    <span>Ground floor</span>
+                    <span>12 seats available</span>
+                    <button class="book-floor">Book ground</button>
+                  </div>
+                  <div class="floor-item">
+                    <span>First floor</span>
+                    <span>6 seats available</span>
+                    <button class="book-floor">Book first</button>
+                  </div>
+                  <div class="floor-item">
+                    <span>Rooftop</span>
+                    <span>4 seats available</span>
+                    <button class="book-floor">Book rooftop</button>
+                  </div>
+                </div>
+                <button class="book-button">Book a table</button>
+              </div>
+            </article>
+          </div>
+          </div>
+        </section>
+        </main>
+      </div>
+    </div>
+    <script src="restaurants.js"></script>
+  </body>
+</html>
