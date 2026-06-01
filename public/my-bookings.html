@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMyTable | My bookings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <a href="index.html" class="brand-link"><span class="brand-red">book</span>my<span class="brand-red">table</span></a>
+        </div>
+        <div class="search-panel">
+          <div class="search-input">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/></svg>
+            <input type="text" placeholder="Search Restaurants" />
+          </div>
+          <button class="search-button" type="button">Search</button>
+        </div>
+        <div class="top-actions">
+          <button type="button" class="location">Bengaluru <span>▾</span></button>
+          <div id="auth-slot"></div>
+          <button type="button" class="menu-toggle" aria-label="Menu">☰</button>
+        </div>
+      </header>
+
+      <div class="app-layout">
+        <nav class="main-nav side-nav">
+          <a href="index.html">Live Availability</a>
+          <a href="restaurants.html">All Restaurants</a>
+          <a href="booking.html">Confirm Booking</a>
+          <a href="my-bookings.html" class="nav-special active">My bookings</a>
+        </nav>
+
+        <main class="page-content booking-page">
+          <section class="booking-panel bookings-dashboard">
+            <p id="bookings-error" class="booking-error hidden"></p>
+            <p class="bookings-account muted">Signed in as <span id="bookings-user"></span></p>
+            <p id="bookings-today-note" class="bookings-today-note muted"></p>
+
+            <div class="bookings-section">
+              <h2 class="bookings-heading">Current &amp; upcoming</h2>
+              <p id="empty-current" class="bookings-empty muted">No upcoming bookings. Dates today or later appear here.</p>
+              <ul id="current-bookings" class="bookings-list"></ul>
+            </div>
+
+            <div class="bookings-section">
+              <h2 class="bookings-heading">Past</h2>
+              <p id="empty-past" class="bookings-empty muted">No past bookings yet.</p>
+              <ul id="past-bookings" class="bookings-list"></ul>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="auth-header.js"></script>
+    <script src="my-bookings.js"></script>
+  </body>
+</html>

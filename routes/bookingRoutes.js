@@ -3,6 +3,15 @@ const mongoose = require("mongoose");
 const router = express.Router();
 
 const Booking = require("../models/booking");
+const { requireAuth } = require("../middleware/requireAuth");
+
+function todayYmdLocal() {
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
 
 function isValidId(id) {
   return mongoose.Types.ObjectId.isValid(id);
@@ -77,6 +86,37 @@ router.get("/", async (req, res) => {
       total,
       skip,
       limit,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+});
+
+/** Current & past bookings for signed-in user (matches booking email to Google account) */
+router.get("/mine", requireAuth, async (req, res) => {
+  try {
+    const email = req.session.user.email;
+    const bookings = await Booking.find({ email })
+      .sort({ date: 1, createdAt: -1 })
+      .lean();
+
+    const today = todayYmdLocal();
+    const current = [];
+    const past = [];
+    for (const b of bookings) {
+      const d = String(b.date || "").trim();
+      if (d && d < today) past.push(b);
+      else current.push(b);
+    }
+
+    res.json({
+      success: true,
+      today,
+      current,
+      past,
     });
   } catch (error) {
     res.status(500).json({

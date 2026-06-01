@@ -764,4 +764,281 @@ input {
   .show-card {
     padding: 20px;
   }
+
+  .auth-slot {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* Auth & my bookings */
+.brand-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.auth-slot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+a.sign-in {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in.nav-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+.auth-user {
+  font-size: 0.88rem;
+  color: var(--muted);
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.signin-card {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.signin-title {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+}
+
+.signin-lead {
+  margin: 0 0 20px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.google-signin-host {
+  min-height: 44px;
+  margin-bottom: 12px;
+}
+
+.google-signin-host--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Full-page modal sign-in (Google-style “Log in” card) */
+.signin-page-body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.signin-backdrop {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px 40px;
+  background: rgba(15, 23, 35, 0.45);
+}
+
+.signin-brand-bar {
+  margin-bottom: 20px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.signin-brand-bar .brand-red {
+  color: #ffb3c9;
+}
+
+.signin-modal {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.12),
+    0 24px 48px rgba(0, 0, 0, 0.16);
+  padding: 22px 26px 26px;
+}
+
+.signin-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.signin-modal-title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #202124;
+  letter-spacing: -0.02em;
+}
+
+.signin-modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: -6px -8px 0 0;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #5f6368;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.signin-modal-close:hover {
+  background: #f1f3f4;
+  color: #202124;
+}
+
+.signin-modal-sub {
+  margin: 0 0 18px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.signin-modal .booking-error {
+  margin-bottom: 14px;
+}
+
+.signin-hint {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.bookings-dashboard {
+  max-width: 640px;
+}
+
+.bookings-account {
+  margin: 0 0 8px;
+}
+
+.bookings-today-note {
+  font-size: 0.82rem;
+  margin: 0 0 24px;
+}
+
+.bookings-section {
+  margin-bottom: 28px;
+}
+
+.bookings-heading {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.bookings-empty {
+  margin: 0 0 8px;
+  font-size: 0.92rem;
+}
+
+.bookings-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.booking-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.booking-row-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.booking-row-meta {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.booking-status {
+  font-size: 0.75rem;
+  text-transform: capitalize;
+  padding: 4px 10px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.booking-status--confirmed {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.booking-status--pending {
+  background: #fff8e6;
+  color: #8a6d00;
+}
+
+.booking-status--cancelled {
+  background: #fdecef;
+  color: var(--accent);
+}
+
+.dev-signin {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.dev-signin-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 8px 0 18px;
+}
+
+.dev-signin-heading {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.dev-signin-lead {
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.dev-signin-lead code {
+  font-size: 0.85em;
+  background: #f0f4f8;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.dev-signin-btn {
+  margin-top: 8px;
+  width: 100%;
 }

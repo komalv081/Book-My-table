@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMyTable | Log in</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="signin-page-body">
+    <div class="signin-backdrop">
+      <a href="index.html" class="signin-brand-bar"
+        ><span class="brand-red">book</span>my<span class="brand-red">table</span></a
+      >
+
+      <div
+        class="signin-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="signin-modal-title"
+      >
+        <div class="signin-modal-header">
+          <h1 id="signin-modal-title" class="signin-modal-title">Log in</h1>
+          <a href="index.html" class="signin-modal-close" aria-label="Close">×</a>
+        </div>
+
+        <p class="signin-modal-sub">
+          Sign in with your Google account to view <strong>current</strong> and
+          <strong>past</strong> bookings for the same email you use when you book a table.
+        </p>
+
+        <div id="signin-error" class="booking-error hidden" role="alert"></div>
+
+        <div id="google-signin" class="google-signin-host google-signin-host--center"></div>
+
+        <div id="dev-signin" class="dev-signin hidden">
+          <div class="dev-signin-divider" aria-hidden="true"></div>
+          <h2 class="dev-signin-heading">Local sign-in (no Google)</h2>
+          <p class="signin-modal-sub dev-signin-lead">
+            Only when <code>ALLOW_DEV_LOGIN=true</code> in <code>.env</code>. Disable before any
+            public deploy.
+          </p>
+          <div class="booking-field">
+            <label for="dev-email">Email</label>
+            <input
+              id="dev-email"
+              type="email"
+              autocomplete="username"
+              placeholder="you@example.com"
+            />
+          </div>
+          <div class="booking-field">
+            <label for="dev-name">Display name (optional)</label>
+            <input id="dev-name" type="text" autocomplete="name" placeholder="Your name" />
+          </div>
+          <button type="button" id="dev-submit" class="search-button dev-signin-btn">
+            Continue
+          </button>
+        </div>
+
+        <p id="signin-hint" class="signin-hint muted"></p>
+      </div>
+    </div>
+    <script src="signin.js"></script>
+  </body>
+</html>

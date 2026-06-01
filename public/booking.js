@@ -73,8 +73,27 @@ function showConfirmation(seats, bookingPayload) {
   message.textContent = `Your booking for ${seats} seat(s) at ${name} on ${floor} (${bookingPayload?.data?.date || ''}) is saved.${ref}`;
 }
 
+async function prefillFromSession() {
+  try {
+    const r = await fetch('/api/auth/me', { credentials: 'include' });
+    if (!r.ok) return;
+    const data = await r.json();
+    const emailEl = document.getElementById('guest-email');
+    const nameEl = document.getElementById('guest-name');
+    if (emailEl && !emailEl.value.trim()) {
+      emailEl.value = data.user?.email || '';
+    }
+    if (nameEl && !nameEl.value.trim()) {
+      nameEl.value = data.user?.name || '';
+    }
+  } catch (_) {
+    /* ignore */
+  }
+}
+
 function initBooking() {
   updateBookingPage();
+  void prefillFromSession();
   const button = document.getElementById('confirm-booking');
   button.addEventListener('click', async () => {
     setError('');
@@ -105,6 +124,7 @@ function initBooking() {
       const res = await fetch('/api/bookings', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
         body: JSON.stringify({
           name: nameVal,
           email: emailVal,
